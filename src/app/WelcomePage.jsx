@@ -19,7 +19,7 @@ const WelcomePage = () => {
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
                         <Gamepad2 className="h-8 w-8 text-purple-500" />
-                        <span className="text-2xl font-bold text-white">GameCraft</span>
+                        <span className="text-2xl font-bold text-white">Robbiy Platform</span>
                     </div>
                     <button onClick={() => nav("/register")} className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition">
                         Kirish
@@ -33,14 +33,14 @@ const WelcomePage = () => {
                     <div className="md:w-1/2">
                         <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
                             Game Development
-                            <span className="text-purple-500"> Siz uchun</span>
+                            <span className="text-purple-500">Siz uchun</span>
                         </h1>
                         <p className="mt-6 text-xl text-gray-300">
                             Bizning keng qamrovli kurslarimiz bilan Game Devni o'zlashtiring.
                             Bizda bolalardan tortib o‘smirlargacha, hamma uchun o‘rganish yo‘llari bor.
                         </p>
                         <div className="mt-8 flex space-x-4 text-center justify-center">
-                            <button onClick={() => nav("/register")}  className="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition flex items-center">
+                            <button onClick={() => nav("/register")} className="bg-purple-600 text-white px-8 py-3 rounded-full hover:bg-purple-700 transition flex items-center">
                                 Platformaga Kirish
                                 <ChevronRight className="ml-2 h-5 w-5" />
                             </button>
@@ -111,7 +111,7 @@ const WelcomePage = () => {
 
             {/* Popular Courses Section */}
             <section className="container mx-auto px-6 py-20">
-                <h2 className="text-4xl font-bold text-white text-center mb-16">Popular Game Projects</h2>
+                <h2 className="text-4xl font-bold text-white text-center mb-16">Loyihalar</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div className="group relative overflow-hidden rounded-xl">
                         <img
@@ -121,8 +121,8 @@ const WelcomePage = () => {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
                             <div>
-                                <h3 className="text-xl font-bold text-white">2D Platform Game</h3>
-                                <p className="text-gray-300 mt-2">Learn basics with a classic platformer</p>
+                                <h3 className="text-xl font-bold text-white">2D Game</h3>
+                                <p className="text-gray-300 mt-2">2D oyinlar yaratish</p>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@ const WelcomePage = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
                             <div>
                                 <h3 className="text-xl font-bold text-white">Puzzle Adventure</h3>
-                                <p className="text-gray-300 mt-2">Create engaging puzzle mechanics</p>
+                                <p className="text-gray-300 mt-2">Qiziqarli Puzzle o'yinlar orqali o'rganish</p>
                             </div>
                         </div>
                     </div>
@@ -148,7 +148,7 @@ const WelcomePage = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
                             <div>
                                 <h3 className="text-xl font-bold text-white">3D Adventure</h3>
-                                <p className="text-gray-300 mt-2">Master 3D game development</p>
+                                <p className="text-gray-300 mt-2">3D modellar bilan ishlash</p>
                             </div>
                         </div>
                     </div>
@@ -160,10 +160,10 @@ const WelcomePage = () => {
                 <div className="bg-gradient-to-r from-purple-600 to-purple-800 rounded-2xl p-12 text-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=2000&q=80')] opacity-10 bg-cover bg-center"></div>
                     <div className="relative z-10">
-                        <h2 className="text-4xl font-bold text-white mb-6">Ready to Start Your Game Dev Journey?</h2>
-                        <p className="text-xl text-purple-100 mb-8">Join thousands of successful game developers who started right here.</p>
-                        <button className="bg-white text-purple-600 px-8 py-3 rounded-full hover:bg-gray-100 transition font-semibold">
-                            Begin Your Adventure
+                        <h2 className="text-4xl font-bold text-white mb-6">Game Dev olamiga sayohatingizni boshlashga tayyormisiz?</h2>
+                        <p className="text-xl text-purple-100 mb-8">Aynan shu yerda boshlangan minglab muvaffaqiyatli oʻyin ishlab chiqaruvchilariga qoʻshiling.</p>
+                        <button onClick={()=>nav("/register")} className="bg-white text-purple-600 px-8 py-3 rounded-full hover:bg-gray-100 transition font-semibold">
+                            Boshlash
                         </button>
                     </div>
                 </div>
@@ -175,7 +175,7 @@ const WelcomePage = () => {
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="flex items-center space-x-2 mb-4 md:mb-0">
                             <Gamepad2 className="h-6 w-6 text-purple-500" />
-                            <span className="text-xl font-bold text-white">GameCraft</span>
+                            <span className="text-xl font-bold text-white">Robbiy GameDev Platform</span>
                         </div>
                         <div className="flex space-x-6">
                             <a href="#" className="text-gray-400 hover:text-white transition">
@@ -187,7 +187,7 @@ const WelcomePage = () => {
                         </div>
                     </div>
                     <div className="mt-8 text-center text-gray-400">
-                        <p>&copy; 2025 GameCraft. All rights reserved.</p>
+                        <p>&copy; 2025.</p>
                     </div>
                 </div>
             </footer>
