@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import steg from "../assets/steg.png";
 import { MdScreenshotMonitor } from "react-icons/md";
 // LoanPage component (Progress bar and loading animation)
 const LoanPage = () => {
+  const location = useLocation();
   const [progress, setProgress] = useState(0); // State for progress value
   const maxProgress = 100;
-
+  const navigate = useNavigate()
   useEffect(() => {
     // Increment progress periodically until it reaches max
     const timer = setInterval(() => {
@@ -22,8 +23,18 @@ const LoanPage = () => {
     return () => clearInterval(timer); // Cleanup interval on component unmount
   }, []);
 
+  useEffect(() => {
+    // Check if user is logged in
+    const user = localStorage.getItem("user");
+    
+    // If user is trying to access /dashboard without being logged in, redirect to /
+    if (!user && location.pathname === "/dashboard") {
+      navigate("/");
+    }
+  }, [location, navigate]);
+  
   return (
-    <div className="w-full h-screen bg-[#1e0a3d] flex justify-center items-center flex-col">
+    <div className="w-full h-screen bg-[#1e0a3d] flex justify-center items-center flex-col fixed">
       <div>
         <img src={steg} width={"200px"} alt="Steg" />
         <div
@@ -54,7 +65,6 @@ const LoanPage = () => {
 // MainLayout component (Header and conditional rendering based on loading state)
 function MainLayout() {
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -64,21 +74,21 @@ function MainLayout() {
   }, []);
   return (
     <>
-      <header className="w-full h-full min-h-10 bg-[#1e0a3d] p-2 pl-4">
+      <header className="w-full  min-h-10 bg-[#1e0a3d] p-2 pl-4 fixed h-[50px]">
         <Link to={"/"}>
           🤖 <span className="text-white font-mono font-light">Robbiy</span>
         </Link>
       </header>
-      {window.innerWidth < 1080 ? (
+      {/* {window.innerWidth < 1080 ? (
         <div className=" w-full text-center flex pt-6 pl-2">
           <div>
             <MdScreenshotMonitor size={500} />
             Bu Platforma kechik ekranlar uchun moslatshrilmagan...
           </div>
         </div>
-      ) : (
-        <main>{loading ? <LoanPage /> : <Outlet />} </main>
-      )}
+      ) : ( */}
+        <main className=" pt-[49px]">{loading ? <LoanPage /> : <Outlet />} </main>
+      {/* )} */}
     </>
   );
 }

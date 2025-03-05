@@ -1,5 +1,3 @@
-import { RiSpace } from "react-icons/ri";
-import FullGame from "../../fullGame/FullGame";
 
 function ShareGame() {
   return (
