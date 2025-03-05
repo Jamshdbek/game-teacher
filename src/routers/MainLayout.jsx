@@ -4,10 +4,9 @@ import steg from "../assets/steg.png";
 import { MdScreenshotMonitor } from "react-icons/md";
 // LoanPage component (Progress bar and loading animation)
 const LoanPage = () => {
-  const location = useLocation();
+
   const [progress, setProgress] = useState(0); // State for progress value
   const maxProgress = 100;
-  const navigate = useNavigate()
   useEffect(() => {
     // Increment progress periodically until it reaches max
     const timer = setInterval(() => {
@@ -23,15 +22,7 @@ const LoanPage = () => {
     return () => clearInterval(timer); // Cleanup interval on component unmount
   }, []);
 
-  useEffect(() => {
-    // Check if user is logged in
-    const user = localStorage.getItem("user");
-    
-    // If user is trying to access /dashboard without being logged in, redirect to /
-    if (!user && location.pathname === "/dashboard") {
-      navigate("/");
-    }
-  }, [location, navigate]);
+ 
   
   return (
     <div className="w-full h-screen bg-[#1e0a3d] flex justify-center items-center flex-col fixed">
@@ -64,7 +55,18 @@ const LoanPage = () => {
 
 // MainLayout component (Header and conditional rendering based on loading state)
 function MainLayout() {
+  const location = useLocation();
+  const navigate = useNavigate()
   const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Check if user is logged in
+    const user = localStorage.getItem("user");
+    
+    // If user is trying to access /dashboard without being logged in, redirect to /
+    if (!user && location.pathname === "/dashboard") {
+      navigate("/");
+    }
+  }, [location, navigate]);
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);

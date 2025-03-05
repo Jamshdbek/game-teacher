@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ChevronLeft } from 'lucide-react';
 
 export default function Register() {
+    const nav = useNavigate()
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -19,6 +20,7 @@ export default function Register() {
         e.preventDefault();
         // console.log('Form submitted:', formData);
         localStorage.setItem("user", JSON.stringify(formData));
+        nav('/dashboard')
         // Handle form submission logic here
     };
 
