@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ChevronLeft, PlayCircle, Clock, BookOpen, Palette, Brush, Image } from 'lucide-react';
 
 export default function DigitalArt() {
+    const navigator = useNavigate()
   const lessons = [
     {
       id: 1,
@@ -11,6 +12,11 @@ export default function DigitalArt() {
       thumbnail: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=60',
       duration: '12 daqiqa',
       difficulty: 'Boshlangich',
+      views: "1.2k",
+      likes: 856,
+      instructor: "Srojddin Komilov",
+      youtubeId:"https://www.youtube.com/watch?v=2BlETkdYFJk&list=PLY4N-4FJdZQCzjRxjFfHQ57xAYvKmk2Yo&index=1",
+      linik:"/video/digital-art/2",
       videoUrl: '#'
     },
     {
@@ -19,6 +25,11 @@ export default function DigitalArt() {
       description: 'Piksel art texnikasi va asboblari',
       thumbnail: 'https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=800&auto=format&fit=crop&q=60',
       duration: '20 daqiqa',
+      views: "1.2k",
+      likes: 856,
+      instructor: "Srojddin Komilov",
+      youtubeId:"https://www.youtube.com/watch?v=pYiGITH2z3s&list=PLY4N-4FJdZQCzjRxjFfHQ57xAYvKmk2Yo&index=2",
+      linik:"/video/digital-art/2",
       difficulty: "O'rta",
       videoUrl: '#'
     },
@@ -28,6 +39,12 @@ export default function DigitalArt() {
       description: 'Blender da sodda 3D modellar yaratish',
       thumbnail: 'https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=800&auto=format&fit=crop&q=60',
       duration: '30 daqiqa',
+      views: "1.2k",
+      likes: 856,
+      linik:"/video/digital-art/2",
+      instructor: "Srojddin Komilov",
+      youtubeId:"https://www.youtube.com/watch?v=IgO3wN-17yw&list=PLY4N-4FJdZQCzjRxjFfHQ57xAYvKmk2Yo&index=3",
+      linik:"/video/game-programming/1",
       difficulty: 'Murakkab',
       videoUrl: '#'
     }
@@ -59,6 +76,7 @@ export default function DigitalArt() {
           {lessons.map((lesson) => (
             <div 
               key={lesson.id} 
+              onClick={()=>navigator(lesson?.linik, {state:{lessons:lesson, nextLessons:lessons}})}
               className="group relative bg-slate-800/50 backdrop-blur-xl rounded-xl overflow-hidden border border-pink-500/20 hover:border-pink-400/40 transition-all duration-300"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-pink-600/10 to-violet-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>

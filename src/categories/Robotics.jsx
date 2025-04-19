@@ -11,6 +11,11 @@ export default function Robotics() {
       thumbnail: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=60',
       duration: '15 daqiqa',
       difficulty: 'Boshlangich',
+      views: "1.2k",
+      likes: 856,
+      instructor: "John Smith",
+      linik:"/video/robotics/1",
+      youtubeId:"https://www.youtube.com/watch?v=ykJ8cJ8QR7A",
       videoUrl: '#'
     },
     {
@@ -19,7 +24,12 @@ export default function Robotics() {
       description: 'Arduino platformasida dasturlash asoslari',
       thumbnail: 'https://images.unsplash.com/photo-1568144628871-ccbb00fc297c?w=800&auto=format&fit=crop&q=60',
       duration: '25 daqiqa',
+      views: "1.2k",
+      likes: 856,
+      instructor: "John Smith",
+      youtubeId:"https://www.youtube.com/watch?v=ykJ8cJ8QR7A",
       difficulty: "O'rta",
+      linik:"/video/robotics/2",
       videoUrl: '#'
     },
     {
@@ -28,7 +38,12 @@ export default function Robotics() {
       description: 'Oddiy materiallardan robot qol yasash loyihasi',
       thumbnail: 'https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800&auto=format&fit=crop&q=60',
       duration: '30 daqiqa',
+      views: "1.2k",
+      likes: 856,
+      instructor: "John Smith",
+      youtubeId:"https://www.youtube.com/watch?v=ykJ8cJ8QR7A",
       difficulty: 'Murakkab',
+      linik:"/video/robotics/2",
       videoUrl: '#'
     }
   ];
@@ -59,6 +74,7 @@ export default function Robotics() {
           {lessons.map((lesson) => (
             <div 
               key={lesson.id} 
+              onClick={()=>navigator(lesson?.linik, {state:{lessons:lesson, nextLessons:lessons}})}
               className="group relative bg-slate-800/50 backdrop-blur-xl rounded-xl overflow-hidden border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/10 to-indigo-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>

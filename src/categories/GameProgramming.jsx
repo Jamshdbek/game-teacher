@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ChevronLeft, PlayCircle, Clock, BookOpen, Code, Terminal, Gamepad } from 'lucide-react';
 
 export default function GameProgramming() {
+  const navigator = useNavigate()
   const lessons = [
     {
       id: 1,
@@ -11,6 +12,11 @@ export default function GameProgramming() {
       thumbnail: 'https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5?w=800&auto=format&fit=crop&q=60',
       duration: '15 daqiqa',
       difficulty: 'Boshlangich',
+      views: "1.2k",
+      likes: 856,
+      instructor: "John Smith",
+      youtubeId:"https://www.youtube.com/watch?v=ykJ8cJ8QR7A",
+      linik:"/video/game-programming/1",
       videoUrl: '#'
     },
     {
@@ -19,7 +25,11 @@ export default function GameProgramming() {
       description: "Python Pygame kutubxonasi bilan sodda o'yin yaratish",
       thumbnail: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=60',
       duration: '20 daqiqa',
+      instructor: "John Smith",
       difficulty: "O'rta",
+      views: "2k",
+      youtubeId:"https://www.youtube.com/watch?v=zAcwouPol9c",
+      likes: 1056,
       videoUrl: '#'
     },
     {
@@ -29,6 +39,10 @@ export default function GameProgramming() {
       thumbnail: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&auto=format&fit=crop&q=60',
       duration: '25 daqiqa',
       difficulty: 'Murakkab',
+      youtubeId:"https://www.youtube.com/watch?v=cUCZDZeYHjE&list=PL5Wwi-DUrgVR_doALTONhcucfW_y7HoZ2",
+      instructor: "John Smith",
+      views: "4k",
+      likes: 856,
       videoUrl: '#'
     }
   ];
@@ -59,14 +73,15 @@ export default function GameProgramming() {
           {lessons.map((lesson) => (
             <div 
               key={lesson.id} 
-              className="group relative bg-slate-800/50 backdrop-blur-xl rounded-xl overflow-hidden border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300"
+              onClick={()=>navigator(lesson?.linik, {state:{lessons:lesson, nextLessons:lessons}})}
+              className="group relative cursor-pointer bg-slate-800/50 backdrop-blur-xl rounded-xl overflow-hidden border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative">
                 <img src={lesson.thumbnail} alt={lesson.title} className="w-full h-48 object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <PlayCircle className="h-16 w-16 text-blue-400" />
+                  {/* <PlayCircle cl÷assName="h-16 w-16 text-blue-400" /> */}
                 </div>
               </div>
               <div className="p-6 relative">

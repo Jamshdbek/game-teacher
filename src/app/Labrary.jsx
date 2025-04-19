@@ -20,7 +20,7 @@ export default function Library() {
       description: 'O\'yin dasturlash simulyatori',
       category: 'O\'yin dasturlash',
       difficulty: 'Oson',
-      link:"",
+      link:"https://docs.google.com/presentation/d/1v4zPGl5CQjnkWnvfrrO_Vq26zSiCBWVWLiymqXIcrig/edit?slide=id.g2c7713057a1_0_518#slide=id.g2c7713057a1_0_518",
       rating: 4.8
     },
     {
@@ -30,25 +30,8 @@ export default function Library() {
       image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=60',
       category: 'Mantiqiy fikrlash',
       difficulty: "O'rta",
+      link:"https://docs.google.com/presentation/d/16TmVadAkIYegr4k_VRcj2HqF_BU74Ot5iIZKLuzdx8M/edit?slide=id.g2c7713057a1_0_518#slide=id.g2c7713057a1_0_518",
       rating: 4.5
-    },
-    {
-      id: 3,
-      title: 'Robot Builder',
-      description: 'Robot yasash simulyatori',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=60',
-      category: 'Robototexnika',
-      difficulty: 'Murakkab',
-      rating: 4.9
-    },
-    {
-      id: 4,
-      title: 'Pixel Art',
-      description: 'Piksel art yaratish',
-      image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=60',
-      category: 'Raqamli sanat',
-      difficulty: "O'rta",
-      rating: 4.7
     },
   ];
 
@@ -88,7 +71,8 @@ export default function Library() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {games.map((game) => (
-            <div key={game.id}  onClick={()=>navigate("/video")} className="bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+            <Link to={game.link}>
+            <div key={game.id} className="bg-slate-800 rounded-xl cursor-pointer overflow-hidden shadow-lg hover:shadow-2xl transition-all">
               <img src={game.image} alt={game.title} className="w-full h-48 object-cover" />
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-white mb-2">{game.title}</h3>
@@ -102,6 +86,7 @@ export default function Library() {
                 </div>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>

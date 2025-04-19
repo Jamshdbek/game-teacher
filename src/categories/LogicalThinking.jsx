@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ChevronLeft, PlayCircle, Clock, BookOpen, Brain, Lightbulb, Puzzle as PuzzlePiece } from 'lucide-react';
 
 export default function LogicalThinking() {
+    const navigator = useNavigate()
   const lessons = [
     {
       id: 1,
@@ -11,6 +12,11 @@ export default function LogicalThinking() {
       thumbnail: 'https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=800&auto=format&fit=crop&q=60',
       duration: '10 daqiqa',
       difficulty: 'Boshlangich',
+      views: "1.2k",
+      likes: 856,
+      linik:"/video/logical-thinking/1",
+      instructor: "John Smith",
+      youtubeId:"https://www.youtube.com/watch?v=ykJ8cJ8QR7A",
       videoUrl: '#'
     },
     {
@@ -19,6 +25,11 @@ export default function LogicalThinking() {
       description: 'Qiziqarli mantiqiy masalalar va ularni yechish usullari',
       thumbnail: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&auto=format&fit=crop&q=60',
       duration: '15 daqiqa',
+      views: "1.2k",
+      linik:"/video/logical-thinking/2",
+      likes: 856,
+      instructor: "John Smith",
+      youtubeId:"https://www.youtube.com/watch?v=ykJ8cJ8QR7A",
       difficulty: 'Orta',
       videoUrl: '#'
     },
@@ -28,6 +39,11 @@ export default function LogicalThinking() {
       description: 'Matematik fikrlashni rivojlantiruvchi mashqlar',
       thumbnail: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop&q=60',
       duration: '20 daqiqa',
+      views: "1.2k",
+      likes: 856,
+      linik:"/video/logical-thinking/3",
+      instructor: "John Smith",
+      youtubeId:"https://www.youtube.com/watch?v=ykJ8cJ8QR7A",
       difficulty: 'Murakkab',
       videoUrl: '#'
     }
@@ -59,6 +75,7 @@ export default function LogicalThinking() {
           {lessons.map((lesson) => (
             <div 
               key={lesson.id} 
+              onClick={()=>navigator(lesson?.linik, {state:{lessons:lesson, nextLessons:lessons}})}
               className="group relative bg-slate-800/50 backdrop-blur-xl rounded-xl overflow-hidden border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-teal-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>

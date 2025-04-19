@@ -19,6 +19,7 @@ import GameProgramming from "../categories/GameProgramming";
 import LogicalThinking from "../categories/LogicalThinking";
 import Robotics from "../categories/Robotics";
 import DigitalArt from "../categories/DigitalArt";
+import VideoPlaer from "../app/Video"
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
@@ -26,7 +27,7 @@ const router = createBrowserRouter(
         <Route index element={<WelcomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<Register />} />
-
+        <Route path="/video/:category/:id" element={<VideoPlaer/>} />
         {/* <Route path="/dashboard" element={<HomePage />} /> */}
         <Route path="/dashboard" element={<Library />} />
         <Route path="/game-list" element={<GameList />} />
