@@ -20,6 +20,7 @@ import LogicalThinking from "../categories/LogicalThinking";
 import Robotics from "../categories/Robotics";
 import DigitalArt from "../categories/DigitalArt";
 import VideoPlaer from "../app/Video"
+import Scratch from "../app/Scratch";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
@@ -39,6 +40,7 @@ const router = createBrowserRouter(
         <Route path="/game-programming" element={<GameProgramming />} />
         <Route path="/logical-thinking" element={<LogicalThinking />} />
         <Route path="/robotics" element={<Robotics />} />
+        <Route  path="/scratch" element={<Scratch/>}/>
         <Route path="/digital-art" element={<DigitalArt />} />
       </Route>
     </Route>

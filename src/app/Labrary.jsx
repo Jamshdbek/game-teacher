@@ -15,6 +15,16 @@ export default function Library() {
   const games = [
     {
       id: 1,
+      title: 'Scratch oyin',
+      image: "https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5?w=800&auto=format&fit=crop&q=60",
+      description: 'Scratch',
+      category: 'O\'yin dasturlash',
+      difficulty: 'Oson',
+      link:"/scratch",
+      rating: 4.8
+    },
+    {
+      id: 1,
       title: 'Code Master',
       image: set_com,
       description: 'O\'yin dasturlash simulyatori',
