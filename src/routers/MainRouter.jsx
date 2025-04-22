@@ -21,6 +21,7 @@ import Robotics from "../categories/Robotics";
 import DigitalArt from "../categories/DigitalArt";
 import VideoPlaer from "../app/Video"
 import Scratch from "../app/Scratch";
+import SnackGame from "../app/SnackGame";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
@@ -31,12 +32,13 @@ const router = createBrowserRouter(
         <Route path="/video/:category/:id" element={<VideoPlaer/>} />
         {/* <Route path="/dashboard" element={<HomePage />} /> */}
         <Route path="/dashboard" element={<Library />} />
+        <Route path="/snack-game" element={<SnackGame />} />
+
         <Route path="/game-list" element={<GameList />} />
         <Route path="/labs" element={<LabsPage />} />
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/create_flappy" element={<FlappyGame />} />
         <Route path="/finish_game" element={<ShareGame />} />
-
         <Route path="/game-programming" element={<GameProgramming />} />
         <Route path="/logical-thinking" element={<LogicalThinking />} />
         <Route path="/robotics" element={<Robotics />} />

@@ -15,34 +15,44 @@ export default function Library() {
   const games = [
     {
       id: 1,
-      title: 'Scratch oyin',
+      title: 'Tic Tac Toe ',
       image: "https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5?w=800&auto=format&fit=crop&q=60",
-      description: 'Scratch',
-      category: 'O\'yin dasturlash',
+      description: 'Tic Tac Toe o\'yin dasturlash',
+      category: '',
       difficulty: 'Oson',
       link:"/scratch",
       rating: 4.8
     },
     {
       id: 1,
-      title: 'Code Master',
+      title: "Ilon o'ynin dasturlash",
       image: set_com,
-      description: 'O\'yin dasturlash simulyatori',
-      category: 'O\'yin dasturlash',
-      difficulty: 'Oson',
-      link:"https://docs.google.com/presentation/d/1v4zPGl5CQjnkWnvfrrO_Vq26zSiCBWVWLiymqXIcrig/edit?slide=id.g2c7713057a1_0_518#slide=id.g2c7713057a1_0_518",
-      rating: 4.8
+      description: 'Snake Game',
+      category: '',
+      difficulty: "O'rtacha",
+      link:"/snack-game",
+      rating: 5
     },
-    {
-      id: 2,
-      title: 'Logic Puzzle',
-      description: 'Mantiqiy masalalarni yechish',
-      image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=60',
-      category: 'Mantiqiy fikrlash',
-      difficulty: "O'rta",
-      link:"https://docs.google.com/presentation/d/16TmVadAkIYegr4k_VRcj2HqF_BU74Ot5iIZKLuzdx8M/edit?slide=id.g2c7713057a1_0_518#slide=id.g2c7713057a1_0_518",
-      rating: 4.5
-    },
+    // {
+    //   id: 1,
+    //   title: 'Code Master',
+    //   image: set_com,
+    //   description: 'O\'yin dasturlash simulyatori',
+    //   category: 'O\'yin dasturlash',
+    //   difficulty: 'Oson',
+    //   link:"https://docs.google.com/presentation/d/1v4zPGl5CQjnkWnvfrrO_Vq26zSiCBWVWLiymqXIcrig/edit?slide=id.g2c7713057a1_0_518#slide=id.g2c7713057a1_0_518",
+    //   rating: 4.8
+    // },
+    // {
+    //   id: 2,
+    //   title: 'Logic Puzzle',
+    //   description: 'Mantiqiy masalalarni yechish',
+    //   image: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=60',
+    //   category: 'Mantiqiy fikrlash',
+    //   difficulty: "O'rta",
+    //   link:"https://docs.google.com/presentation/d/16TmVadAkIYegr4k_VRcj2HqF_BU74Ot5iIZKLuzdx8M/edit?slide=id.g2c7713057a1_0_518#slide=id.g2c7713057a1_0_518",
+    //   rating: 4.5
+    // },
   ];
 
   return (

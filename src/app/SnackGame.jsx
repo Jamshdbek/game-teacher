@@ -2,7 +2,7 @@ import { ChevronLeft } from 'lucide-react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Scratch() {
+function SnackGame() {
     return (
         <div>
             <div className="flex items-center my-2">
@@ -11,9 +11,9 @@ function Scratch() {
                     Kutubxonaga qaytish
                 </Link>
             </div>
-            <iframe style={{ width: "100%", height: "100vh" }} src="https://tik-gmae.vercel.app/" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <iframe style={{ width: "100%", height: "100vh" }} src="https://snake-simple-game.vercel.app" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>
     )
 }
 
-export default Scratch
+export default SnackGame
