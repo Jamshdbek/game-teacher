@@ -65,7 +65,7 @@ const WelcomePage = () => {
 
             {/* Age Groups Section */}
             <section className="container mx-auto px-6 py-20">
-                <h2 className="text-4xl font-bold text-white text-center mb-16">Learning Paths for Every Age</h2>
+                <h2 className="text-4xl font-bold text-white text-center mb-16">Har bir yosh uchun o'rganish yo'llari</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     <div className="relative group">
                         <div className="absolute -inset-1 bg-gradient-to-r from-pink-600 to-purple-600 rounded-xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
@@ -74,9 +74,9 @@ const WelcomePage = () => {
                             <h3 className="text-2xl font-bold text-white mb-4">Bolalar (7-12)</h3>
                             <p className="text-gray-400 mb-6">O'yin yaratish orqali asosiy dasturlash tushunchalarini o'rgatadigan qiziqarli, interaktiv platforma</p>
                             <ul className="space-y-3 text-gray-300">
-                                <li>• Programming</li>
+                                <li>• Dasturlash</li>
                                 <li>• Boshlang'ich Game Logic</li>
-                                <li>• 2D Games</li>
+                                <li>• 2D O'yinlar</li>
                             </ul>
                         </div>
                     </div>
@@ -87,9 +87,9 @@ const WelcomePage = () => {
                             <h3 className="text-2xl font-bold text-white mb-4">O'smirlar (13-17)</h3>
                             <p className="text-gray-400 mb-6">Haqiqiy dasturlash tillari va o'yin codingga qaratilgan oraliq kurslar.</p>
                             <ul className="space-y-3 text-gray-300">
-                                <li>• Python Game Development</li>
-                                <li>• Unity Basics</li>
-                                <li>• JavaScript Game Dev</li>
+                                <li>• Python darslar</li>
+                                <li>• Unity Basics darslar</li>
+                                <li>• JavaScript darslar</li>
                             </ul>
                         </div>
                     </div>
@@ -100,9 +100,9 @@ const WelcomePage = () => {
                             <h3 className="text-2xl font-bold text-white mb-4">Kattalar</h3>
                             <p className="text-gray-400 mb-6">Professional o'yinlarni ishlab chiqish va sanoat standartlarini o'z ichiga olgan ilg'or kurslar.</p>
                             <ul className="space-y-3 text-gray-300">
-                                <li>• Unreal Engine</li>
-                                <li>• 3D Game Development</li>
-                                <li>• Game Architecture</li>
+                                <li>• Unreal Engine darslar</li>
+                                <li>• 3D O'yinlar bo'yicha ko'nikma</li>
+                                <li>• Game Architecture bo'yicha darslar</li>
                             </ul>
                         </div>
                     </div>
@@ -115,27 +115,27 @@ const WelcomePage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div className="group relative overflow-hidden rounded-xl">
                         <img
-                            src="https://images.unsplash.com/photo-1580234811497-9df7fd2f357e?auto=format&fit=crop&w=800&q=80"
-                            alt="2D Platform Game"
+                            src="https://realpython.com/cdn-cgi/image/width=1920,format=auto/https://files.realpython.com/media/Build-an-AI-Game-Engine-for-Tic-Tac-Toe-in-Python_Watermarked.b90cdf84c417.jpg"
+                            alt="Tok Tak Toe mashxur o'yinin yaratish"
                             className="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
                             <div>
-                                <h3 className="text-xl font-bold text-white">2D Game</h3>
-                                <p className="text-gray-300 mt-2">2D oyinlar yaratish</p>
+                                <h3 className="text-xl font-bold text-white">Tik Tak Toe O'yin yaratish</h3>
+                                <p className="text-gray-300 mt-2">2D oyinlar</p>
                             </div>
                         </div>
                     </div>
                     <div className="group relative overflow-hidden rounded-xl">
                         <img
-                            src="https://images.unsplash.com/photo-1556438064-2d7646166914?auto=format&fit=crop&w=800&q=80"
+                            src="	https://miro.medium.com/v2/resize:fit:1400/format:webp/0*KbrAjjJaeHlrObLj.png"
                             alt="Puzzle Game"
                             className="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
                             <div>
-                                <h3 className="text-xl font-bold text-white">Puzzle Adventure</h3>
-                                <p className="text-gray-300 mt-2">Qiziqarli Puzzle o'yinlar orqali o'rganish</p>
+                                <h3 className="text-xl font-bold text-white">Ilon o'yin (Snake 2d game)</h3>
+                                <p className="text-gray-300 mt-2">Ilon o'yin yaratish </p>
                             </div>
                         </div>
                     </div>
@@ -148,7 +148,7 @@ const WelcomePage = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-end p-6">
                             <div>
                                 <h3 className="text-xl font-bold text-white">3D Adventure</h3>
-                                <p className="text-gray-300 mt-2">3D modellar bilan ishlash</p>
+                                <p className="text-gray-300 mt-2">Qo'shimcha darslar</p>
                             </div>
                         </div>
                     </div>
@@ -175,7 +175,7 @@ const WelcomePage = () => {
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <div className="flex items-center space-x-2 mb-4 md:mb-0">
                             <Gamepad2 className="h-6 w-6 text-purple-500" />
-                            <span className="text-xl font-bold text-white">Robbiy GameDev Platform</span>
+                            <span className="text-xl font-bold text-white">Robbiy</span>
                         </div>
                         <div className="flex space-x-6">
                             <a href="#" className="text-gray-400 hover:text-white transition">
